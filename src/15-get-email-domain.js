@@ -10,7 +10,7 @@
  */
 function getEmailDomain(email) {
   const index = email.lastIndexOf('@');
-  return email.substring(index);
+  return email.substring(index + 1);
   // throw new Error('Not implemented');
 }
 
