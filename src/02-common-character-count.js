@@ -11,7 +11,7 @@
  */
 function getCommonCharacterCount(s1, s2) {
   function countCharacters(str) {
-    let temp = {};
+    const temp = {};
     for (let i = 0; i < str.length; i++) {
       if (!temp[str[i]]) {
         temp[str[i]] = 1;
