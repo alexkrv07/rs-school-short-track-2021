@@ -11,6 +11,7 @@
  */
 function sortByHeight(arr) {
   const temp = [];
+  const result = [];
 
   arr.forEach((element) => {
     if (element >= 0) {
@@ -24,11 +25,13 @@ function sortByHeight(arr) {
 
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] >= 0) {
-      arr[i] = temp[j];
+      result.push(temp[j]);
       j++;
+    } else {
+      result.push(arr[i]);
     }
   }
-  return arr;
+  return result;
 }
 
 module.exports = sortByHeight;
