@@ -10,7 +10,7 @@
  *
  */
 function deleteDigit(n) {
-  const nStrins = '' + n;
+  const nStrins = n.toString();
   const arr = [];
   for (let i = 0; i < nStrins.length; i++) {
     arr.push(parseInt(nStrins.substring(0, i) + nStrins.substring(i + 1), 10));
