@@ -12,17 +12,31 @@
  */
 
 class Queue {
+  head = null;
+  tail = null;
+  sizeOfQueue = 0;
+
   get size() {
-    throw new Error('Not implemented');
+    return this.sizeOfQueue;
   }
 
-  enqueue(/* element */) {
-    throw new Error('Not implemented');
+  enqueue(element) {
+    let temp = new ListNode(element);
+    if (!this.head) {
+      this.head = temp;
+      this.tail = temp;
+    } else {
+      this.tail.next = temp;
+      this.tail = this.tail.next;
+    }
+    this.sizeOfQueue++;
   }
 
   dequeue() {
-    throw new Error('Not implemented');
-  }
+    let temp = this.head;
+    this.head = this.head.next;
+    this.sizeOfQueue--;
+    return temp.value;
 }
 
 module.exports = Queue;
