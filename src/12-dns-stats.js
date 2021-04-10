@@ -20,30 +20,31 @@
  * }
  *
  */
-function getDNSStats(domains) {
-  function riseValue (destination, source) {
-    if (destination[source]) {
-      destination[source]++;
-    } else {
-      destination[source] = 1;
-    }
-  }
-  const separator = '.';
-  const result = {};
-  for (let i = 0; i < domains.length; i++) {
-    let nextsearch = domains[i];
-    let index = nextsearch.lastIndexOf(separator);
-    let subdomain = '';
-    while (index >= 0) {
-      subdomain += nextsearch.substring(index);
-      riseValue(result, subdomain);
-      nextsearch = nextsearch.substring(0, index);
-      index = nextsearch.lastIndexOf(separator);
-    }
-    subdomain += separator + nextsearch;
-    riseValue(result, subdomain);
-  }
-  return result;
+function getDNSStats(/* domains */) {
+  // function riseValue (destination, source) {
+  //   if (destination[source]) {
+  //     destination[source]++;
+  //   } else {
+  //     destination[source] = 1;
+  //   }
+  // }
+  // const separator = '.';
+  // const result = {};
+  // for (let i = 0; i < domains.length; i++) {
+  //   let nextsearch = domains[i];
+  //   let index = nextsearch.lastIndexOf(separator);
+  //   let subdomain = '';
+  //   while (index >= 0) {
+  //     subdomain += nextsearch.substring(index);
+  //     riseValue(result, subdomain);
+  //     nextsearch = nextsearch.substring(0, index);
+  //     index = nextsearch.lastIndexOf(separator);
+  //   }
+  //   subdomain += separator + nextsearch;
+  //   riseValue(result, subdomain);
+  // }
+  // return result;
+  throw new Error('Not implemented');
 }
 
 module.exports = getDNSStats;
