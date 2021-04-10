@@ -11,19 +11,20 @@
  * For ([1, 2, 3], 2) should return 1
  *
  */
-function findIndex(array, value) {
-  let begin = 0;
-  let end = array.length;
-  const mid = Math.floor((end - begin) / 2);
-  if (array[mid] === value) {
-    return mid;
-  }
-  if (array[mid] < value) {
-    begin = mid;
-    return mid + findIndex(array.slice(begin, end), value);
-  }
-  end = mid;
-  return findIndex(array.slice(begin, end), value);
+function findIndex(/* array, value */) {
+  // let begin = 0;
+  // let end = array.length;
+  // const mid = Math.floor((end - begin) / 2);
+  // if (array[mid] === value) {
+  //   return mid;
+  // }
+  // if (array[mid] < value) {
+  //   begin = mid;
+  //   return mid + findIndex(array.slice(begin, end), value);
+  // }
+  // end = mid;
+  // return findIndex(array.slice(begin, end), value);
+  throw new Error('Not implemented');
 }
 
 module.exports = findIndex;
