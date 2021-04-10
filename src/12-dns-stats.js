@@ -20,31 +20,32 @@
  * }
  *
  */
-function getDNSStats(/* domains */) {
-  // function riseValue (destination, source) {
-  //   if (destination[source]) {
-  //     destination[source]++;
-  //   } else {
-  //     destination[source] = 1;
-  //   }
-  // }
-  // const separator = '.';
-  // const result = {};
-  // for (let i = 0; i < domains.length; i++) {
-  //   let nextsearch = domains[i];
-  //   let index = nextsearch.lastIndexOf(separator);
-  //   let subdomain = '';
-  //   while (index >= 0) {
-  //     subdomain += nextsearch.substring(index);
-  //     riseValue(result, subdomain);
-  //     nextsearch = nextsearch.substring(0, index);
-  //     index = nextsearch.lastIndexOf(separator);
-  //   }
-  //   subdomain += separator + nextsearch;
-  //   riseValue(result, subdomain);
-  // }
-  // return result;
-  throw new Error('Not implemented');
+function getDNSStats(domains) {
+  const separator = '.';
+  const result = {};
+  for (let i = 0; i < domains.length; i++) {
+    let nextsearch = domains[i];
+    let index = nextsearch.lastIndexOf(separator);
+    let subdomain = '';
+    while (index >= 0) {
+      subdomain += nextsearch.substring(index);
+      if (result[subdomain]) {
+        result[subdomain]++;
+      } else {
+        result[subdomain] = 1;
+      }
+      nextsearch = nextsearch.substring(0, index);
+      index = nextsearch.lastIndexOf(separator);
+    }
+    subdomain += separator + nextsearch;
+    if (result[subdomain]) {
+      result[subdomain]++;
+    } else {
+      result[subdomain] = 1;
+    }
+  }
+  return result;
+  // throw new Error('Not implemented');
 }
 
 module.exports = getDNSStats;
