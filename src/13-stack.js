@@ -12,6 +12,7 @@
  */
 class Stack {
   arr = [];
+
   push(element) {
     this.arr.push(element);
   }
@@ -21,7 +22,7 @@ class Stack {
   }
 
   peek() {
-    return this.arr[this.arr.length - 1];s
+    return this.arr[this.arr.length - 1];
   }
 }
 
