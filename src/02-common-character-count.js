@@ -25,7 +25,7 @@ function getCommonCharacterCount(/* s1, s2 */) {
   // const temp2 = countCharacters(s2);
 
   // let sum = 0;
-  // for (const key in temp1) {
+  // for (let key in temp1) {
   //   if (key in temp2) {
   //     sum += temp1[key] < temp2[key] ? temp1[key] : temp2[key];
   //   }
