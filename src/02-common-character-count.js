@@ -10,24 +10,28 @@
  * Strings have 3 common characters - 2 "a"s and 1 "c".
  */
 function getCommonCharacterCount(/* s1, s2 */) {
-  // function countCharacters(str) {
-  //   const temp = {};
-  //   for (let i = 0; i < str.length; i++) {
-  //     if (!temp[str[i]]) {
-  //       temp[str[i]] = 1;
-  //     } else {
-  //       temp[str[i]]++;
-  //     }
+  // const temp1 = {};
+  // const temp2 = {};
+  // for (let i = 0; i < s1.length; i++) {
+  //   if (!temp1[s1[i]]) {
+  //     temp1[s1[i]] = 1;
+  //   } else {
+  //     temp1[s1[i]]++;
   //   }
-  //   return temp;
   // }
-  // const temp1 = countCharacters(s1);
-  // const temp2 = countCharacters(s2);
-
+  // for (let i = 0; i < s2.length; i++) {
+  //   if (!temp2[s2[i]]) {
+  //     temp2[s2[i]] = 1;
+  //   } else {
+  //     temp2[s2[i]]++;
+  //   }
+  // }
   // let sum = 0;
-  // for (let key in temp1) {
-  //   if (key in temp2) {
-  //     sum += temp1[key] < temp2[key] ? temp1[key] : temp2[key];
+  // const key1 = Object.keys(temp1);
+  // const key2 = Object.keys(temp2);
+  // for (let i = 0; i < key1.length; i++) {
+  //   if (key1[i] in key2) {
+  //     sum += temp1[key1[i]] < temp2[key1[i]] ? temp1[key1[i]] : temp2[key1[i]];
   //   }
   // }
   // return sum;
