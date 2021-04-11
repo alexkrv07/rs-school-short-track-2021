@@ -14,16 +14,23 @@
 function findIndex(/* array, value */) {
   // let begin = 0;
   // let end = array.length;
-  // const mid = Math.floor((end - begin) / 2);
-  // if (array[mid] === value) {
-  //   return mid;
+  // let mid = Math.floor((end - begin) / 2);
+
+  // while (begin !== end) {
+  //   if (array[mid] === value) {
+  //     return mid;
+  //   }
+  //   if (array[mid] < value) {
+  //     begin = mid + 1;
+  //     // return mid + findIndex(array.slice(begin, end), value);
+  //   } else {
+  //     end = mid;
+  //   }
+  //   mid = Math.floor((end - begin) / 2);
   // }
-  // if (array[mid] < value) {
-  //   begin = mid;
-  //   return mid + findIndex(array.slice(begin, end), value);
-  // }
+  // return -1;
   // end = mid;
-  // return findIndex(array.slice(begin, end), value);
+  // return array[mid];
   throw new Error('Not implemented');
 }
 
